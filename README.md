@@ -1,6 +1,7 @@
 # Scripts_py
 
-## My scripts. For nuitka compilation use:
+## My scripts.
+For nuitka compilation to .bin use:
 
 ```
 pip install nuitka
