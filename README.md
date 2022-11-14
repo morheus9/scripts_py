@@ -1,6 +1,4 @@
-# Scripts_py
-
-## My scripts.
+# My scripts.
 For nuitka compilation to .bin use:
 
 ```
