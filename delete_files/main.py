@@ -35,7 +35,7 @@ def delete_empty_dirs(folders):
     global TOTAL_DELETED_DIRS
     empty_folders_in_this_run = 0
     for path, dirs, files in os.walk(folder):
-        if (not dirs) and (not files) and (path != FOLDERS[0]):
+        if (not dirs) and (not files) and (path not in FOLDERS):
             TOTAL_DELETED_DIRS += 1
             empty_folders_in_this_run += 1
             os.rmdir(path)
