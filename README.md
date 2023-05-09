@@ -1,11 +1,14 @@
 # My scripts.
-For nuitka compilation to .bin use:
+For nuitka or pyinstaller compilation to .bin use:
+```
+pyinstaller --onefile main.py
+nuitka3 --onefile main.py
+```
 
 ```
 pip install nuitka
 nuitka3 --onefile main.py
 ```
-
 
 For python use:
 
