@@ -1,11 +1,12 @@
 # My scripts.
 For nuitka or pyinstaller compilation to .bin use:
 ```
+pip install pyinstaller
 pyinstaller --onefile main.py
-nuitka3 --onefile main.py
 ```
 
 ```
+sudo apt install patchelf
 pip install nuitka
 nuitka3 --onefile main.py
 ```
