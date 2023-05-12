@@ -11,7 +11,7 @@ pip install nuitka
 nuitka3 --onefile main.py
 ```
 
-For python use:
+For installing python use:
 
 ```
 sudo add-apt-repository ppa:deadsnakes/ppa
