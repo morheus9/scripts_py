@@ -4,7 +4,7 @@ For nuitka or pyinstaller compilation to .bin use:
 pip install pyinstaller
 pyinstaller --onefile main.py
 ```
-
+and
 ```
 sudo apt install patchelf
 pip install nuitka
