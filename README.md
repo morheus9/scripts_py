@@ -29,4 +29,6 @@ poetry add something
 poetry env list
 poetry env remove --all
 poetry export --without-hashes --format=requirements.txt > requirements.txt
+
+poetry show --tree
 ```
