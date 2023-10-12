@@ -14,17 +14,17 @@ For installing python use:
 ```
 sudo add-apt-repository ppa:deadsnakes/ppa
 sudo apt update
-sudo apt install python3.11 python3.11-venv
+sudo apt install python3.11-dev python3.11-venv
 python3.11 -V
 ```
-venv:
+Poetry:
 ```
-python3.11 -m venv name
-pip freeze > requirements.txt 
-pip3 install -r requirements.txt
-```
-script set
-```
-#!/usr/bin/env python
-chmod +x myfile.py
+curl -sSL https://install.python-poetry.org | python3 -
+poetry self update
+poetry init
+poetry add something
+poetry env list
+poetry env remove --all
+poetry export --without-hashes --format=requirements.txt > requirements.txt
+poetry show --tree
 ```
