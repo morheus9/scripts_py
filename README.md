@@ -35,7 +35,7 @@ Poetry:
 curl -sSL https://install.python-poetry.org | python3 -
 poetry self update
 
-poetry init
+poetry shell or poetry init
 poetry add fastapi
 poetry env list
 poetry env remove --all
