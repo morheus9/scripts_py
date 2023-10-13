@@ -37,6 +37,7 @@ poetry self update
 
 poetry shell or poetry init
 poetry add fastapi
+poetry remove fastapi
 poetry env list
 poetry env remove --all
 poetry export --without-hashes --format=requirements.txt > requirements.txt
