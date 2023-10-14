@@ -14,8 +14,8 @@ For installing python use:
 ```
 sudo add-apt-repository ppa:deadsnakes/ppa
 sudo apt update
-sudo apt install python3.11 python3.11-venv
-python3.11 -V
+sudo apt install python3.12 python3.12-venv
+python3.12 -V
 ```
 Poetry:
 ```
@@ -26,6 +26,7 @@ poetry shell or poetry init
 poetry add fastapi
 poetry remove fastapi
 poetry env list
+poetry env use /usr/bin/python3.12
 poetry env remove -n envname
 poetry env remove --all
 poetry export --without-hashes --format=requirements.txt > requirements.txt
