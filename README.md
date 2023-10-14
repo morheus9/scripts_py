@@ -31,3 +31,16 @@ poetry env remove --all
 poetry export --without-hashes --format=requirements.txt > requirements.txt
 poetry show --tree
 ```
+Micromamba:
+```
+"${SHELL}" <(curl -L micro.mamba.pm/install.sh)
+micromamba self-update
+micromamba create -n name
+micromamba install fastapi
+micromamba list
+micromamba remove fastapi
+micromamba env list
+micromamba env remove -n name
+micromamba build -f path/to/requirements.txt
+micromamba clean --all (delete cache)
+```
