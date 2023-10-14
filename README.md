@@ -35,12 +35,13 @@ Micromamba:
 ```
 "${SHELL}" <(curl -L micro.mamba.pm/install.sh)
 micromamba self-update
-micromamba create -n name
+
+micromamba create -n name -f mamba.yml
 micromamba install fastapi
 micromamba list
 micromamba remove fastapi
 micromamba env list
+micromamba env export > mamba.yml
 micromamba env remove -n name
-micromamba build -f path/to/requirements.txt
 micromamba clean --all (delete cache)
 ```
