@@ -1,4 +1,8 @@
 # My scripts.
+```
+#!/usr/bin/env python
+chmod +x myfile.py
+```
 For pyinstaller compilation to .bin use:
 ```
 pip install pyinstaller
