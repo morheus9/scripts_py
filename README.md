@@ -30,7 +30,7 @@ poetry shell or poetry init
 poetry add fastapi
 poetry remove fastapi
 poetry env list
-poetry env use /usr/bin/python3.12
+poetry env use /usr/bin/python3.11 or poetry env use python3.11
 poetry env remove -n envname
 poetry env remove --all
 poetry export --without-hashes --format=requirements.txt > requirements.txt
