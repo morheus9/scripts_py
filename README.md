@@ -28,6 +28,7 @@ poetry self update
 
 poetry shell or poetry init
 poetry add fastapi
+poetry add ruff -G dev
 poetry remove fastapi
 poetry env list
 poetry env use /usr/bin/python3.11 or poetry env use python3.11
