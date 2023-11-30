@@ -40,11 +40,14 @@ poetry show --tree
 Micromamba:
 ```
 # https://mamba.readthedocs.io/en/latest/installation/micromamba-installation.html
-curl -Ls https://micro.mamba.pm/api/micromamba/linux-64/latest | tar -xvj bin/micromamba
+"${SHELL}" <(curl -L micro.mamba.pm/install.sh)
 micromamba self-update
 ./bin/micromamba shell init -s bash -p ~/micromamba
 
+micromamba create -n BASED -conda-forge
 micromamba create -n name -f mamba.yml
+micromamba activate BASED
+micromamba deactivate
 micromamba install fastapi
 micromamba list
 micromamba remove fastapi
