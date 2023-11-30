@@ -39,8 +39,10 @@ poetry show --tree
 ```
 Micromamba:
 ```
-"${SHELL}" <(curl -L micro.mamba.pm/install.sh)
+# https://mamba.readthedocs.io/en/latest/installation/micromamba-installation.html
+curl -Ls https://micro.mamba.pm/api/micromamba/linux-64/latest | tar -xvj bin/micromamba
 micromamba self-update
+./bin/micromamba shell init -s bash -p ~/micromamba
 
 micromamba create -n name -f mamba.yml
 micromamba install fastapi
