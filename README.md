@@ -20,32 +20,14 @@ conda config --set solver libmamba
 conda config --show-sources
 
 conda create -n CONDA python=3.11
-micromamba create -n CONDA -f requirements.yml
+conda create -n CONDA -f requirements.yml
 conda env list
 conda env remove -n CONDA
-conda install pandas
+conda install -y pandas
 conda list
-conda remove pandas
+conda remove -y pandas
 conda env export -f requirements.yml
 conda clean -a
-```
-Micro mamba:
-```
-# https://mamba.readthedocs.io/en/latest/installation/micromamba-installation.html
-conda install -y micromamba
-micromamba self-update
-
-micromamba create -n MAMBA python=3.11
-micromamba create -n MAMBA -f mamba.yml
-micromamba env list
-micromamba env remove -n MAMBA
-micromamba activate MAMBA
-micromamba deactivate
-micromamba install pandas
-micromamba list
-micromamba remove pandas
-micromamba env export > mamba.yml
-micromamba clean -a
 ```
 Poetry:
 ```
