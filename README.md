@@ -19,30 +19,13 @@ conda install -n base conda-libmamba-solver
 conda config --set solver libmamba
 conda config --show-sources
 
-conda create -n CONDA python=3.11
+conda create -n CONDA
 conda env list
 conda env remove -n CONDA
 conda install pandas
 conda list
 conda remove pandas
 conda clean -a
-```
-Micro mamba:
-```
-# https://mamba.readthedocs.io/en/latest/installation/micromamba-installation.html
-micromamba self-update
-
-micromamba create -n MAMBA python=3.11
-micromamba create -n MAMBA -f mamba.yml
-micromamba env list
-micromamba env remove -n MAMBA
-micromamba activate MAMBA
-micromamba deactivate
-micromamba install pandas
-micromamba list
-micromamba remove pandas
-micromamba env export > mamba.yml
-micromamba clean -a
 ```
 Poetry:
 ```
@@ -61,6 +44,23 @@ poetry export --without-hashes --format=requirements.txt > requirements.txt
 poetry show --tree
 poetry cache list
 poetry cache clear PyPI --all
+```
+Micro mamba:
+```
+# https://mamba.readthedocs.io/en/latest/installation/micromamba-installation.html
+micromamba self-update
+
+micromamba create -n MAMBA python=3.11
+micromamba create -n MAMBA -f mamba.yml
+micromamba env list
+micromamba env remove -n MAMBA
+micromamba activate MAMBA
+micromamba deactivate
+micromamba install pandas
+micromamba list
+micromamba remove pandas
+micromamba env export > mamba.yml
+micromamba clean -a
 ```
 For pyinstaller compilation to .bin use:
 ```
