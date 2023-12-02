@@ -20,11 +20,13 @@ conda config --set solver libmamba
 conda config --show-sources
 
 conda create -n CONDA python=3.11
+micromamba create -n CONDA -f requirements.yml
 conda env list
 conda env remove -n CONDA
 conda install pandas
 conda list
 conda remove pandas
+conda env export -f requirements.yml
 conda clean -a
 ```
 Micro mamba:
