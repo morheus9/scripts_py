@@ -3,17 +3,6 @@
 #!/usr/bin/env python
 chmod +x myfile.py
 ```
-For pyinstaller compilation to .bin use:
-```
-pip install pyinstaller
-pyinstaller --onefile main.py
-```
-For nuitka:
-```
-sudo apt install patchelf
-pip install nuitka
-nuitka3 --onefile main.py
-```
 For installing python use:
 ```
 sudo add-apt-repository ppa:deadsnakes/ppa
@@ -23,6 +12,12 @@ python3.12 -V
 ```
 Micro conda:
 ```
+# https://docs.conda.io/projects/miniconda/en/latest/
+conda update -n base conda
+
+conda install -n base conda-libmamba-solver
+conda config --set solver libmamba
+
 conda create -n CONDA python=3.11
 conda env list
 conda env remove -n CONDA
@@ -34,9 +29,7 @@ conda clean -a
 Micro mamba:
 ```
 # https://mamba.readthedocs.io/en/latest/installation/micromamba-installation.html
-"${SHELL}" <(curl -L micro.mamba.pm/install.sh)
 micromamba self-update
-./bin/micromamba shell init -s bash -p ~/micromamba
 
 micromamba create -n MAMBA python=3.11
 micromamba create -n MAMBA -f mamba.yml
@@ -52,7 +45,7 @@ micromamba clean -a
 ```
 Poetry:
 ```
-curl -sSL https://install.python-poetry.org | python3 -
+# https://python-poetry.org/docs/#installing-with-the-official-installer
 poetry self update
 
 poetry shell or poetry init
@@ -67,4 +60,15 @@ poetry export --without-hashes --format=requirements.txt > requirements.txt
 poetry show --tree
 poetry cache list
 poetry cache clear PyPI --all
+```
+For pyinstaller compilation to .bin use:
+```
+pip install pyinstaller
+pyinstaller --onefile main.py
+```
+For nuitka:
+```
+sudo apt install patchelf
+pip install nuitka
+nuitka3 --onefile main.py
 ```
