@@ -37,22 +37,32 @@ poetry env remove --all
 poetry export --without-hashes --format=requirements.txt > requirements.txt
 poetry show --tree
 ```
-Micromamba:
+Micro conda:
+```
+conda create -n CONDA python=3.11
+conda env list
+conda env remove -n CONDA
+conda install pandas
+conda remove pandas
+conda list
+conda clean -a (delete caches)
+```
+Micro mamba:
 ```
 # https://mamba.readthedocs.io/en/latest/installation/micromamba-installation.html
 "${SHELL}" <(curl -L micro.mamba.pm/install.sh)
 micromamba self-update
 ./bin/micromamba shell init -s bash -p ~/micromamba
 
-micromamba create -n BASED -conda-forge
-micromamba create -n name -f mamba.yml
-micromamba activate BASED
-micromamba deactivate
-micromamba install fastapi
-micromamba list
-micromamba remove fastapi
+micromamba create -n MAMBA
+micromamba create -n MAMBA -f mamba.yml
 micromamba env list
+micromamba env remove -n MAMBA
+micromamba activate MAMBA
+micromamba deactivate
+micromamba install pandas
+micromamba list
+micromamba remove pandas
 micromamba env export > mamba.yml
-micromamba env remove -n name
-micromamba clean --all (delete cache)
+micromamba clean -a (delete caches)
 ```
