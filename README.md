@@ -17,6 +17,7 @@ conda update -n base conda
 
 conda install -n base conda-libmamba-solver
 conda config --set solver libmamba
+conda config --show-sources
 
 conda create -n CONDA python=3.11
 conda env list
