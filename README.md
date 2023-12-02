@@ -43,8 +43,8 @@ conda create -n CONDA python=3.11
 conda env list
 conda env remove -n CONDA
 conda install pandas
-conda remove pandas
 conda list
+conda remove pandas
 conda clean -a (delete caches)
 ```
 Micro mamba:
@@ -54,7 +54,7 @@ Micro mamba:
 micromamba self-update
 ./bin/micromamba shell init -s bash -p ~/micromamba
 
-micromamba create -n MAMBA
+micromamba create -n MAMBA python=3.1
 micromamba create -n MAMBA -f mamba.yml
 micromamba env list
 micromamba env remove -n MAMBA
