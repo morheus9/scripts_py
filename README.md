@@ -27,24 +27,6 @@ conda list
 conda remove pandas
 conda clean -a
 ```
-Poetry:
-```
-# https://python-poetry.org/docs/#installing-with-the-official-installer
-poetry self update
-
-poetry shell or poetry init
-poetry add fastapi
-poetry add ruff -G dev
-poetry remove fastapi
-poetry env list
-poetry env use /usr/bin/python3.11 or poetry env use python3.11
-poetry env remove -n envname
-poetry env remove --all
-poetry export --without-hashes --format=requirements.txt > requirements.txt
-poetry show --tree
-poetry cache list
-poetry cache clear PyPI --all
-```
 Micro mamba:
 ```
 # https://mamba.readthedocs.io/en/latest/installation/micromamba-installation.html
@@ -62,6 +44,24 @@ micromamba list
 micromamba remove pandas
 micromamba env export > mamba.yml
 micromamba clean -a
+```
+Poetry:
+```
+# https://python-poetry.org/docs/#installing-with-the-official-installer
+poetry self update
+
+poetry shell or poetry init
+poetry add fastapi
+poetry add ruff -G dev
+poetry remove fastapi
+poetry env list
+poetry env use /usr/bin/python3.11 or poetry env use python3.11
+poetry env remove -n envname
+poetry env remove --all
+poetry export --without-hashes --format=requirements.txt > requirements.txt
+poetry show --tree
+poetry cache list
+poetry cache clear PyPI --all
 ```
 For pyinstaller compilation to .bin use:
 ```
