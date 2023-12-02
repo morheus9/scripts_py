@@ -21,22 +21,6 @@ sudo apt update
 sudo apt install python3.12 python3.12-venv
 python3.12 -V
 ```
-Poetry:
-```
-curl -sSL https://install.python-poetry.org | python3 -
-poetry self update
-
-poetry shell or poetry init
-poetry add fastapi
-poetry add ruff -G dev
-poetry remove fastapi
-poetry env list
-poetry env use /usr/bin/python3.11 or poetry env use python3.11
-poetry env remove -n envname
-poetry env remove --all
-poetry export --without-hashes --format=requirements.txt > requirements.txt
-poetry show --tree
-```
 Micro conda:
 ```
 conda create -n CONDA python=3.11
@@ -65,4 +49,22 @@ micromamba list
 micromamba remove pandas
 micromamba env export > mamba.yml
 micromamba clean -a (delete caches)
+```
+Poetry:
+```
+curl -sSL https://install.python-poetry.org | python3 -
+poetry self update
+
+poetry shell or poetry init
+poetry add fastapi
+poetry add ruff -G dev
+poetry remove fastapi
+poetry env list
+poetry env use /usr/bin/python3.11 or poetry env use python3.11
+poetry env remove -n envname
+poetry env remove --all
+poetry export --without-hashes --format=requirements.txt > requirements.txt
+poetry show --tree
+poetry cache list
+poetry cache clear PyPI --all
 ```
