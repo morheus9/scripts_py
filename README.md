@@ -48,6 +48,7 @@ poetry cache clear PyPI --all
 Micro mamba:
 ```
 # https://mamba.readthedocs.io/en/latest/installation/micromamba-installation.html
+conda install -y micromamba
 micromamba self-update
 
 micromamba create -n MAMBA python=3.11
