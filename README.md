@@ -38,7 +38,7 @@ Micro mamba:
 micromamba self-update
 ./bin/micromamba shell init -s bash -p ~/micromamba
 
-micromamba create -n MAMBA python=3.1
+micromamba create -n MAMBA python=3.11
 micromamba create -n MAMBA -f mamba.yml
 micromamba env list
 micromamba env remove -n MAMBA
