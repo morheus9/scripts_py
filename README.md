@@ -29,7 +29,7 @@ conda env remove -n CONDA
 conda install pandas
 conda list
 conda remove pandas
-conda clean -a (delete caches)
+conda clean -a
 ```
 Micro mamba:
 ```
@@ -48,7 +48,7 @@ micromamba install pandas
 micromamba list
 micromamba remove pandas
 micromamba env export > mamba.yml
-micromamba clean -a (delete caches)
+micromamba clean -a
 ```
 Poetry:
 ```
