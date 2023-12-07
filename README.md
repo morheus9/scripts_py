@@ -10,6 +10,25 @@ sudo apt update
 sudo apt install python3.12 python3.12-venv
 python3.12 -V
 ```
+Poetry:
+```
+# https://python-poetry.org/docs/#installing-with-the-official-installer
+poetry self update
+
+poetry shell or poetry init
+poetry add fastapi
+poetry add ruff -G dev
+poetry remove fastapi
+poetry env list
+poetry env use /usr/bin/python3.11 or poetry env use python3.11
+poetry env remove -n envname
+poetry env remove --all
+poetry export --without-hashes --format=requirements.txt > requirements.txt
+poetry show --tree
+poetry cache list
+poetry cache clear PyPI --all
+poetry env info
+```
 Mini conda:
 ```
 # https://docs.conda.io/projects/miniconda/en/latest/
@@ -28,24 +47,6 @@ conda list
 conda remove -y pandas
 conda env export -f requirements.yml
 conda clean -a
-```
-Poetry:
-```
-# https://python-poetry.org/docs/#installing-with-the-official-installer
-poetry self update
-
-poetry shell or poetry init
-poetry add fastapi
-poetry add ruff -G dev
-poetry remove fastapi
-poetry env list
-poetry env use /usr/bin/python3.11 or poetry env use python3.11
-poetry env remove -n envname
-poetry env remove --all
-poetry export --without-hashes --format=requirements.txt > requirements.txt
-poetry show --tree
-poetry cache list
-poetry cache clear PyPI --all
 ```
 For pyinstaller compilation to .bin use:
 ```
