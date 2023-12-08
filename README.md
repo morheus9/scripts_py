@@ -15,7 +15,9 @@ Poetry:
 # https://python-poetry.org/docs/#installing-with-the-official-installer
 poetry self update
 
-poetry shell or poetry init
+poetry init
+poetry shell
+poetry install
 poetry add fastapi
 poetry add ruff -G dev
 poetry remove fastapi
